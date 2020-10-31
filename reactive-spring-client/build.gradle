@@ -1,0 +1,13 @@
+plugins {
+    id("base")
+}
+
+group 'com.iftodi.reactive'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    // Make the root project archives configuration depend on every subproject
+    subprojects.forEach {
+        archives(it)
+    }
+}
